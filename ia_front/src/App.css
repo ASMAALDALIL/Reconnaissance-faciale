@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* --- Personnalisation du Calendrier --- */
+
+/* L'en-tête (Mois/Année) */
+.react-datepicker__header {
+  background-color: #f0fdfd !important; /* Cyan très clair */
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* Le jour sélectionné (Le rond bleu devient Cyan) */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #00C4CC !important;
+  color: white !important;
+  border-radius: 50% !important; /* Rond parfait */
+}
+
+/* Au survol d'un jour */
+.react-datepicker__day:hover {
+  background-color: #e0fbfb !important;
+  border-radius: 50% !important;
+}
+
+/* Jour d'aujourd'hui */
+.react-datepicker__day--today {
+  font-weight: bold;
+  color: #00C4CC !important;
+}
+
+/* Flèches de navigation */
+.react-datepicker__navigation-icon::before {
+  border-color: #00C4CC !important;
+}
+
+/* Masquer le contour bleu moche du focus */
+.react-datepicker-wrapper input:focus {
+  outline: none;
+  border-color: #00C4CC;
+  box-shadow: 0 0 0 2px rgba(0, 196, 204, 0.2);
+}
